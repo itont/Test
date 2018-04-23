@@ -18,10 +18,12 @@ namespace MFrame
         public static string Call(string content)
         {
             var result = string.Empty;
-#if NET451
-            result = $@"NET451###{content}";
+#if NET40
+            result = $@"NET40###{content}";
 #elif NET45
             result = $@"NET45###{content}";
+#elif NET451
+            result = $@"NET451###{content}";
 #elif NETSTANDARD2_0 || NETCOREAPP2_0
             result = $@"NETSTANDARD2_0###{content}";
 #endif
