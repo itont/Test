@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +25,9 @@ namespace MFrame
 #elif NET451
             result = $@"NET451###{content}";
 #elif NETSTANDARD2_0 || NETCOREAPP2_0
-            result = $@"NETSTANDARD2_0###{content}";
+            result = $@"NS2_0###{content}";
+#elif NETSTANDARD2_1
+            result = $@"NS2_1###{content}";
 #endif
             return result;
         }
